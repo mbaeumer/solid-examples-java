@@ -7,5 +7,27 @@ public class OrderItem {
 
     private double stockPrice;
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public double getStockPrice() {
+        return stockPrice;
+    }
+
+    public void setStockPrice(double stockPrice) {
+        this.stockPrice = stockPrice;
+    }
 }
