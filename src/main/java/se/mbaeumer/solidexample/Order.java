@@ -13,6 +13,8 @@ public class Order {
 
     private Date expectedDeliveryDate;
 
+    private boolean isExpressOrder;
+
     public Long getId() {
         return id;
     }
@@ -51,5 +53,13 @@ public class Order {
 
     public void setExpectedDeliveryDate(Date expectedDeliveryDate) {
         this.expectedDeliveryDate = expectedDeliveryDate;
+    }
+
+    public boolean isExpressOrder() {
+        return isExpressOrder;
+    }
+
+    public void setExpressOrder(boolean expressOrder) {
+        isExpressOrder = expressOrder;
     }
 }
