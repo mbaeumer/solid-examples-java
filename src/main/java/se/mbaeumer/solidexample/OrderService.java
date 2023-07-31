@@ -13,8 +13,10 @@ public class OrderService {
         // determine the expected delivery date
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
-        if (order.isExpressOrder()){
+        if (order.getOrderType() == OrderType.EXPRESS){
             calendar.add(Calendar.DAY_OF_MONTH, 3);
+        }else if (order.getOrderType() == OrderType.SUPEREXPRESS){
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
         }else{
             calendar.add(Calendar.DAY_OF_MONTH, 7);
         }
