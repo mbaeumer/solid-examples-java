@@ -3,17 +3,17 @@ package se.mbaeumer.solidexample;
 import java.util.Date;
 import java.util.List;
 
-public class Order {
-    private Long id;
-    private List<OrderItem> orderItems;
+public abstract class Order {
+    protected Long id;
+    protected List<OrderItem> orderItems;
 
-    private Customer customer;
+    protected Customer customer;
 
-    private Date orderDate;
+    protected Date orderDate;
 
-    private Date expectedDeliveryDate;
+    protected Date expectedDeliveryDate;
 
-    private OrderType orderType;
+    protected OrderType orderType;
 
     public Long getId() {
         return id;
@@ -62,4 +62,6 @@ public class Order {
     public void setOrderType(OrderType orderType) {
         this.orderType = orderType;
     }
+
+    public abstract Date calculateExpectedDeliveryDate();
 }

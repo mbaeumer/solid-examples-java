@@ -9,22 +9,10 @@ public class OrderService {
     public void createOrder(Order order, Customer customer){
         // do some validation
 
+        Date expectedDelivery = order.calculateExpectedDeliveryDate();
+        order.setExpectedDeliveryDate(expectedDelivery);
 
-        // determine the expected delivery date
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(new Date());
-        if (order.getOrderType() == OrderType.EXPRESS){
-            calendar.add(Calendar.DAY_OF_MONTH, 3);
-        }else if (order.getOrderType() == OrderType.SUPEREXPRESS){
-            calendar.add(Calendar.DAY_OF_MONTH, 1);
-        }else{
-            calendar.add(Calendar.DAY_OF_MONTH, 7);
-        }
-
-        order.setExpectedDeliveryDate(calendar.getTime());
         // save order data to the database
-
-
     }
 
     public void cancelOrder(Order order){}
