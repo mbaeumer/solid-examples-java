@@ -10,6 +10,7 @@ public class OrderService {
     public Order viewOrderDetails(Order order){
         return null;
     }
+    public void changePassword(Customer customer){}
     public void changeOrder(Order order){}
     public List<Order> getOrdersByCustomer(Customer customer){
         return null;
