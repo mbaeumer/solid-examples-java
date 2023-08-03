@@ -6,13 +6,9 @@ import java.util.List;
 public class Order {
     private Long id;
     private List<OrderItem> orderItems;
-
     private Customer customer;
-
     private Date orderDate;
-
     private Date expectedDeliveryDate;
-
     private boolean isExpressOrder;
 
     public Long getId() {

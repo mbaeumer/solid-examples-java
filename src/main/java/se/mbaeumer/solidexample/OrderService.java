@@ -9,7 +9,6 @@ public class OrderService {
     public void createOrder(Order order, Customer customer){
         // do some validation
 
-
         // determine the expected delivery date
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
@@ -21,8 +20,6 @@ public class OrderService {
 
         order.setExpectedDeliveryDate(calendar.getTime());
         // save order data to the database
-
-
     }
 
     public void cancelOrder(Order order){}
