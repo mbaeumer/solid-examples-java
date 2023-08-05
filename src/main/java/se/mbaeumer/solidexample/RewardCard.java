@@ -1,13 +1,8 @@
 package se.mbaeumer.solidexample;
 
-public class RewardCard extends PaymentInstrument{
+public class RewardCard implements PaymentInstrument{
     @Override
     public boolean validate() {
         return false;
-    }
-
-    @Override
-    public void runFraudCheck() {
-
     }
 }

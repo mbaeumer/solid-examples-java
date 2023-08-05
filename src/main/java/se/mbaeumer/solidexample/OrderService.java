@@ -6,18 +6,16 @@ import java.util.List;
 
 public class OrderService {
 
-    public void createOrder(Order order, Customer customer, PaymentInstrument paymentInstrument){
+    public void createOrder(Order order, Customer customer,
+                            PaymentInstrument paymentInstrument){
         // do some validation
 
         // determine the expected delivery date
         Date expectedDelivery = order.calculateExpectedDeliveryDate();
         order.setExpectedDeliveryDate(expectedDelivery);
 
-        // validate the payment and run fraud check
+        // validate the payment (fraud check is performed in another method)
         paymentInstrument.validate();
-        if (paymentInstrument instanceof CreditCard || paymentInstrument instanceof DebitCard){
-            paymentInstrument.runFraudCheck();
-        }
     }
 
     public void cancelOrder(Order order){}

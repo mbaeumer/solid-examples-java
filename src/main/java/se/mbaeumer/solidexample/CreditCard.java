@@ -1,6 +1,6 @@
 package se.mbaeumer.solidexample;
 
-public class CreditCard extends PaymentInstrument{
+public class CreditCard extends BaseBankCard implements FraudChecker{
     @Override
     public boolean validate() {
         return false;
