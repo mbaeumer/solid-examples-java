@@ -10,22 +10,24 @@ class OrderServiceTest {
     void createOrder_Standard() {
         OrderService orderService = new OrderService();
         StandardOrder standardOrder = new StandardOrder();
-        orderService.createOrder(standardOrder, new Customer());
+        CreditCard creditCard = new CreditCard();
+        orderService.createOrder(standardOrder, new Customer(), creditCard);
     }
 
     @Test
     void createOrder_Express() {
         OrderService orderService = new OrderService();
         ExpressOrder expressOrder = new ExpressOrder();
-
-        orderService.createOrder(expressOrder, new Customer());
+        CreditCard creditCard = new CreditCard();
+        orderService.createOrder(expressOrder, new Customer(), creditCard);
     }
 
     @Test
     void createOrder_SuperExpress() {
         OrderService orderService = new OrderService();
         SuperExpressOrder superExpressOrder = new SuperExpressOrder();
-        orderService.createOrder(superExpressOrder, new Customer());
+        CreditCard creditCard = new CreditCard();
+        orderService.createOrder(superExpressOrder, new Customer(), creditCard);
     }
 
 
