@@ -2,15 +2,15 @@ package se.mbaeumer.solidexample;
 
 public class DbService {
 
-    public void saveOrder(){
+    public void saveOrder(Order order){
 
     }
 
-    public void deleteOrder(){
+    public void deleteOrder(Order order){
 
     }
 
-    public void updateOrder(){
+    public void updateOrder(Order order){
 
     }
 
@@ -18,7 +18,7 @@ public class DbService {
 
     }
 
-    public void getOrderById(){
+    public void getOrderById(Long id){
 
     }
 }

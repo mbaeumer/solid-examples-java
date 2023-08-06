@@ -16,6 +16,10 @@ public class OrderService {
 
         // validate the payment (fraud check is performed in another method)
         paymentInstrument.validate();
+
+        // save order to the database
+        DbService dbService = new DbService();
+        dbService.saveOrder(order);
     }
 
     public void cancelOrder(Order order){}
