@@ -1,24 +1,14 @@
 package se.mbaeumer.solidexample;
 
-public class DbService {
+public interface DbService {
 
-    public void saveOrder(Order order){
+    public void saveOrder(Order order);
 
-    }
+    void deleteOrder(Order order);
 
-    public void deleteOrder(Order order){
+    void updateOrder(Order order);
 
-    }
+    public void getAllOrders();
 
-    public void updateOrder(Order order){
-
-    }
-
-    public void getAllOrders(){
-
-    }
-
-    public void getOrderById(Long id){
-
-    }
+    public void getOrderById(Long id);
 }

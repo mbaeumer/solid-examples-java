@@ -6,6 +6,12 @@ import java.util.List;
 
 public class OrderService {
 
+    private final DbService dbService;
+
+    public OrderService(DbService dbService) {
+        this.dbService = dbService;
+    }
+
     public void createOrder(Order order, Customer customer,
                             PaymentInstrument paymentInstrument){
         // do some validation
@@ -18,8 +24,7 @@ public class OrderService {
         paymentInstrument.validate();
 
         // save order to the database
-        DbService dbService = new DbService();
-        dbService.saveOrder(order);
+        this.dbService.saveOrder(order);
     }
 
     public void cancelOrder(Order order){}
